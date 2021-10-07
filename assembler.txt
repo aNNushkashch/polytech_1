@@ -1,0 +1,37 @@
+1)
+MOV [16], 1
+
+2)
+MOB A, 128
+.петля:
+MOV [A], 1
+INC A
+ЦМП A, 144
+JNZ .loop
+
+3)
+MOB A, 230
+.петля:
+INC A
+MOV [A], 1
+CMP A, 255
+JNZ .loop
+
+4)
+MOB A, 230
+MOV C, 'T'
+.петля:
+INC A
+MOV [A], C
+CMP A, 255
+JNZ .loop
+
+5)
+MOB A, 231
+MOV с, '0'
+.петля:
+INC A
+MOV [A], c
+INC c
+ЦМП A, 241
+JNZ .loop
